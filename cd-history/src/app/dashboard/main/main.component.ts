@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TimelineModel } from '../timeline/timeline.model';
 
 @Component({
   selector: 'app-main',
@@ -8,6 +9,11 @@ import { Component, OnInit } from '@angular/core';
 export class MainComponent implements OnInit {
 
   constructor() { }
+
+  entries: TimelineModel[] = [
+    {title: 'created', image: '', description: 'this is desc', year: '1992'},
+    {title: 'created', image: '', description: 'this is desc', year: '1993'}
+  ] ;
 
   ngOnInit() {
   }
