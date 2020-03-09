@@ -1,16 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
 @font-face {
-    font-family: myFirstFont;
-    src: url('./assets/fonts/futura.ttf');
-  }
+  font-family: myFirstFont;
+  src: url('./assets/fonts/futura.ttf');
+}
 
-  body {
-      font-family: myFirstFont;
-      margin: 10px;
-      //background: linear-gradient(200deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
-      background: #f1f1f1
-  }
+html {
+  scroll-behavior: smooth;
+}
 
-  ::ng-deep .material-icons{
-    font-family: 'Material Icons' !important;
+body {
+  font-family: myFirstFont;
+  margin: 10px;
+  //background: linear-gradient(200deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+  background: #f1f1f1
+}
+
+::ng-deep .material-icons {
+  font-family: 'Material Icons' !important;
 }

@@ -1,9 +1,13 @@
 @import '../../../assets/scss/layout.scss';
 
+.main_wrapper {
+    height: 100vh;
+}
+
 .image {
-    width: 95vw;
+  width: 95vw;
 }
 
 .main_text {
-    font-size: 80px
+  font-size: 80px;
 }

@@ -1,6 +1,11 @@
-<div class="_flex_row_start main_text">
-  A look into the history of one of the most influential brands of the 21st century.
+<div class="main_wrapper">
+  <div class="_flex_row_start">
+    <span class="main_text">A look into the history of one of the most influential brands of the 21st century.</span>
+  </div>
+  <img src='../../../assets/supreme-logo.png' class="image">
+  <a href="#timeline">test</a>
 </div>
-<img src='../../../assets/supreme-logo.png' class="image">
-<!-- <mat-icon>arrow_downward</mat-icon> -->
-<app-timeline [timelineEntries]="entries"></app-timeline>
+
+<div id="timeline">
+  <app-timeline [timelineEntries]="entries"></app-timeline>
+</div>

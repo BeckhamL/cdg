@@ -140,4 +140,17 @@
 
 .image {
   max-width: 300px;
+  transition: transform .2s;
+}
+
+.image:hover {
+  transform: scale(1.5);
+  cursor: pointer;
+}
+
+.nav_button {
+  position: fixed;
+  bottom: 100px;
+  right: 100px; 
+  cursor: pointer;
 }
