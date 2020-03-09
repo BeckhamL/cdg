@@ -1,10 +1,13 @@
 <div class="timeline">
   <div *ngFor="let entry of timelineEntries; let i = index">
     <div class="container" [ngClass]="i % 2 == 0 ? 'left' : 'right' ">
-        <div class="content">
-            <h2>{{entry.year}}</h2>
-            <p>{{entry.description}}</p>
-          </div>
+      <div class="_flex content">
+        <img class="image" src="{{entry.image}}">
+        <div class="_flex_col">
+          <div class="year_text">{{entry.year}}</div>
+          <div class="description_text">{{entry.description}}</div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

@@ -1,14 +1,18 @@
-
 ._flex {
-    display: flex;
+  display: flex;
+}
+
+._flex_col {
+  display: flex;
+  flex-direction: column;
 }
 
 ._flex_row_end {
-    display: flex;
-    justify-content: flex-end;
+  display: flex;
+  justify-content: flex-end;
 }
 
 ._flex_row_start {
-    display: flex;
-    justify-content: flex-start;
+  display: flex;
+  justify-content: flex-start;
 }
