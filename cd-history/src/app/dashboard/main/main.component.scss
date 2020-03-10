@@ -1,7 +1,7 @@
 @import '../../../assets/scss/layout.scss';
 
 .main_wrapper {
-    height: 100vh;
+  height: 100vh;
 }
 
 .image {
@@ -10,4 +10,9 @@
 
 .main_text {
   font-size: 80px;
+  text-align: center;
+}
+
+.heading_text {
+  font-size: 24px;
 }

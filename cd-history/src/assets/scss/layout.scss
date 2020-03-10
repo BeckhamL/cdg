@@ -7,6 +7,11 @@
   flex-direction: column;
 }
 
+._flex_wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 ._flex_row_end {
   display: flex;
   justify-content: flex-end;
@@ -15,4 +20,8 @@
 ._flex_row_start {
   display: flex;
   justify-content: flex-start;
+}
+
+._justify_center {
+  justify-content: center;
 }

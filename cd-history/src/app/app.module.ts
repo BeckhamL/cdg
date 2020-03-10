@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainComponent } from './dashboard/main/main.component';
 import { TimelineComponent } from './dashboard/timeline/timeline.component';
+import { LanguageGridComponent } from './dashboard/language-grid/language-grid.component';
 // import {MatIconModule} from '@angular/material/icon';
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
-    TimelineComponent
+    TimelineComponent,
+    LanguageGridComponent
   ],
   imports: [
     BrowserModule,

@@ -11,9 +11,9 @@ export class MainComponent implements OnInit {
   constructor() { }
 
   entries: TimelineModel[] = [
-    {title: 'created', image: '../../assets/james-jebbia.jpg', description: 'Supreme is founded in New York city by James Jebbia', year: '1994'},
-    {title: 'created', image: '../../assets/travis-tee.jpg', description: 'Travis Bickle - First product Supreme released', year: '1994'},
-    {title: 'created', image: '../../assets/cherry.jpg', description: 'cherry, a skate film directed by William Strobeck featuring skaters such as Tyshawn Jones, Sage Elsesser', year: '2014'}
+    {title: 'created', image: '../../assets/james-jebbia.jpg', description: 'Supreme is founded in New York city by James Jebbia', year: 1994},
+    {title: 'created', image: '../../assets/travis-tee.jpg', description: 'Travis Bickle - First product Supreme released', year: 1994},
+    {title: 'created', image: '../../assets/cherry.jpg', description: 'cherry, a skate film directed by William Strobeck featuring skaters such as Tyshawn Jones, Sage Elsesser', year: 2014}
   ] ;
 
   ngOnInit() {

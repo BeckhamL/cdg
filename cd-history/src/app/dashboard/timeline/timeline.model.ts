@@ -3,5 +3,5 @@ export class TimelineModel {
     image: string;
     description: string;
     caption?: string;
-    year: string;
+    year: number;
 }
