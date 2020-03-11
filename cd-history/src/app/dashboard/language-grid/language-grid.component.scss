@@ -1,18 +1,22 @@
 @import '../../../assets/scss/layout.scss';
 
-.grid_wrapper {
-  //max-width: 500px;
-}
-
 .element {
   padding: 10px;
+  margin: 10px;
+  //border: 1px solid black;
+  background: white;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
 }
 
 img {
-  width: 100px;
+  width: 125px;
+  position: relative;
+  top: 0;
+  transition: top ease 0.5s;
 }
 
 img:hover {
-  box-shadow: 0px 3px 6px #00000018;
   cursor: pointer;
+  top: -5px;
 }
