@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TimelineModel } from '../timeline/timeline.model';
-
+import { LanguageModel } from '../language-grid/language.model';
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
@@ -10,6 +10,14 @@ export class MainComponent implements OnInit {
 
   constructor() { }
 
+  languages: LanguageModel[] = [
+    {title: 'JavaScript', image: 'javascript.svg'},
+    {title: 'C', image: 'c-language.svg'},
+    {title: 'Java', image: 'java.svg'},
+    {title: 'TypeScript', image: 'typescript.svg'},
+    {title: 'Python', image: 'python.svg'}
+  ];
+
   entries: TimelineModel[] = [
     {title: 'created', image: '../../assets/james-jebbia.jpg', description: 'Supreme is founded in New York city by James Jebbia', year: 1994},
     {title: 'created', image: '../../assets/travis-tee.jpg', description: 'Travis Bickle - First product Supreme released', year: 1994},
@@ -17,6 +25,10 @@ export class MainComponent implements OnInit {
   ] ;
 
   ngOnInit() {
+  }
+
+  getSelectedLanguage($event) {
+    
   }
 
 }

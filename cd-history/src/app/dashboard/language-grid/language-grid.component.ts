@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { LanguageModel } from './language.model';
 
 @Component({
   selector: 'app-language-grid',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LanguageGridComponent implements OnInit {
 
+  @Input()
+  languages: LanguageModel[];
+
+  @Output()
+  selectedLanguage: EventEmitter<LanguageModel> = new EventEmitter<LanguageModel>();
+  
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onSelectLanguage($event: LanguageModel) {
+    this.selectedLanguage.emit($event);
   }
 
 }

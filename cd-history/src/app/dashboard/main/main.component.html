@@ -3,8 +3,7 @@
     <span>A tutorial on how to get started with coding</span>
     <span class="heading_text">This tutorial assumes you have absolutely zero knowledge of programming - you will learn how to get started in &lt; 5 mins</span>
   </div>
-  <!-- <img src='../../../assets/supreme-logo.png' class="image"> -->
-  <app-language-grid></app-language-grid>
+  <app-language-grid [languages]="languages" (selectedLanguage)="getSelectedLanguage($event)"></app-language-grid>
   <a href="#timeline">test</a>
 </div>
 

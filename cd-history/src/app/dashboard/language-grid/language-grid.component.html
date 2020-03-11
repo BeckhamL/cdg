@@ -1,22 +1,7 @@
 <div class="_flex_wrap _justify_center grid_wrapper">
-  <div class="element">
-    <img src="../../../assets/images/javascript.svg">
+  <div *ngFor="let language of languages">
+    <div class="element" title="{{language.title}}" (click)="onSelectLanguage(language)">
+      <img src="../../../assets/images/{{language.image}}">
+    </div>
   </div>
-  <div class="element">
-    <img src="../../../assets/images/c-language.svg">
-  </div>
-  <div class="element">
-    <img src="../../../assets/images/java.svg">
-  </div>
-  <div class="element">
-    <img src="../../../assets/images/typescript.svg">
-  </div>
-  <div class="element">
-      <img src="../../../assets/images/python.svg">
-  </div>
-  <div class="element"></div>
-  <div class="element"></div>
-  <div class="element"></div>
-  <div class="element"></div>
-  <div class="element"></div>
 </div>
