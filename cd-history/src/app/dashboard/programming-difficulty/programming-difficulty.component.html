@@ -2,11 +2,12 @@
   <!-- <div>Choose the excercise you would like to work on</div> -->
 </div>
 <div class="_flex_wrap _justify_center _space_evenly">
-  <div class="card" *ngFor="let excercise of excercises" (click)="onClickProgrammingDifficulty(excercise)">
-    <img src="../../../assets/images/{{excercise.image}}">
+  <div class="_flex _flex_align_item_end card" *ngFor="let excercise of excercises" (click)="onClickProgrammingDifficulty(excercise)" aTilt>
+
+    <img src="../../../assets/images/{{excercise.image}}" class="inner">
     <div class="text_wrapper">
-        <div class="card_text">Excercise: {{excercise.title}}</div>
-        <div class="card_text">Time to learn: {{excercise.timeToLearn}}</div>
+      <div class="card_text">Excercise: {{excercise.title}}</div>
+      <div class="card_text">Time to learn: {{excercise.timeToLearn}}</div>
     </div>
 
   </div>
