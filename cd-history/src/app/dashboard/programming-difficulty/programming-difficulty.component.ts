@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { ProgrammingDifficultyModel } from './programming-difficulty.model';
 
 @Component({
@@ -10,10 +10,17 @@ export class ProgrammingDifficultyComponent implements OnInit {
 
   @Input()
   excercises: ProgrammingDifficultyModel[];
-  
+
+  @Output()
+  chosenExcercise: EventEmitter<ProgrammingDifficultyModel> = new EventEmitter<ProgrammingDifficultyModel>();
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onClickProgrammingDifficulty(excercise: ProgrammingDifficultyModel) {
+    this.chosenExcercise.emit(excercise);
   }
 
 }

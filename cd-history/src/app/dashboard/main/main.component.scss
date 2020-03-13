@@ -1,6 +1,14 @@
 @import '../../../assets/scss/layout.scss';
 
+a {
+  text-decoration: none;
+}
+
 .main_wrapper {
+  height: 100vh;
+}
+
+.difficulty_wrapper {
   height: 100vh;
 }
 

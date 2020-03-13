@@ -27,6 +27,8 @@ export class MainComponent implements OnInit {
 
   excercises: ProgrammingDifficultyModel[] = [
     {title: 'Hello World', difficulty: ExcerciseDifficultyEnum.easy, image: 'javascript.svg', timeToLearn: '5 minutes'},
+    {title: 'For loops', difficulty: ExcerciseDifficultyEnum.easy, image: 'javascript.svg', timeToLearn: '5 minutes'},
+    {title: 'FizzBuzz', difficulty: ExcerciseDifficultyEnum.medium, image: 'javascript.svg', timeToLearn: '10 minutes'},
   ]
 
   ngOnInit() {
@@ -34,6 +36,10 @@ export class MainComponent implements OnInit {
 
   getSelectedLanguage($event) {
     
+  }
+
+  getSelectedDifficulty($event) {
+    console.log($event);
   }
 
 }

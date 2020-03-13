@@ -6,7 +6,7 @@
   width: 300px;
   border-radius: 10px;
   background: white;
-  border: 5px solid #ffc04c;
+  border: 5px inset #ffc04c;
 
   img {
     width: 300px
@@ -16,6 +16,14 @@
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   cursor: pointer;
+}
+
+.text_wrapper {
+  padding: 10px;
+}
+
+.card_text {
+  color: black;
 }
 
 .container {
