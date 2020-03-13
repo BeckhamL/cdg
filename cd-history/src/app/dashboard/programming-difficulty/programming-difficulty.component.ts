@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { ProgrammingDifficultyModel } from './programming-difficulty.model';
 
 @Component({
   selector: 'app-programming-difficulty',
@@ -7,6 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProgrammingDifficultyComponent implements OnInit {
 
+  @Input()
+  excercises: ProgrammingDifficultyModel[];
+  
   constructor() { }
 
   ngOnInit() {

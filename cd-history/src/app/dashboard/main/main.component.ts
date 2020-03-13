@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TimelineModel } from '../timeline/timeline.model';
 import { LanguageModel } from '../language-grid/language.model';
+import { ProgrammingDifficultyModel, ExcerciseDifficultyEnum } from '../programming-difficulty/programming-difficulty.model';
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
@@ -22,7 +23,11 @@ export class MainComponent implements OnInit {
     {title: 'created', image: '../../assets/james-jebbia.jpg', description: 'Supreme is founded in New York city by James Jebbia', year: 1994},
     {title: 'created', image: '../../assets/travis-tee.jpg', description: 'Travis Bickle - First product Supreme released', year: 1994},
     {title: 'created', image: '../../assets/cherry.jpg', description: 'cherry, a skate film directed by William Strobeck featuring skaters such as Tyshawn Jones, Sage Elsesser', year: 2014}
-  ] ;
+  ];
+
+  excercises: ProgrammingDifficultyModel[] = [
+    {title: 'Hello World', difficulty: ExcerciseDifficultyEnum.easy, image: 'javascript.svg', timeToLearn: '5 minutes'},
+  ]
 
   ngOnInit() {
   }
