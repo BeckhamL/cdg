@@ -1,11 +1,12 @@
 <div class="timeline">
-  <div *ngFor="let entry of timelineEntries; let i = index">
+  <div *ngFor="let steps of fakeData?.steps; let i = index">
     <div class="container" [ngClass]="i % 2 == 0 ? 'left' : 'right' ">
       <div class="_flex content">
-        <img class="image" src="{{entry.image}}">
+        <img class="image" src="../../../assets/images/{{steps.image}}">
         <div class="_flex_col">
-          <div class="year_text">{{entry.year}}</div>
-          <div class="description_text">{{entry.description}}</div>
+          <div class="year_text">Step {{i+1}}</div>
+          <div class="year_text">{{steps.title}}</div>
+          <div class="description_text">{{steps.description}}</div>
         </div>
       </div>
     </div>

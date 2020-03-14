@@ -4,7 +4,7 @@ export class TimelineModel {
 
 export class TimelineStep {
   title: string;
-  image: string;
+  image?: string;
   description: string;
   caption?: string;
 }

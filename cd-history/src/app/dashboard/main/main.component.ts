@@ -29,6 +29,15 @@ export class MainComponent implements OnInit {
     {title: 'FizzBuzz', difficulty: ExcerciseDifficultyEnum.medium, image: 'javascript.svg', timeToLearn: '10 minutes'},
   ]
 
+  fakeData: TimelineModel = {
+    steps: [
+      {title: 'Getting started', description: 'blag blag blag', image: 'javascript.svg'},
+      {title: 'Getting started', description: 'blag blag blag', image: 'javascript.svg'},
+      {title: 'Getting started', description: 'blag blag blag', image: 'javascript.svg'}
+
+    ]
+  }
+
   ngOnInit() {
   }
 
