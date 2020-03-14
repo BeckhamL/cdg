@@ -10,8 +10,8 @@
   </div>
 
   <a href="#difficulty_component">
+      <span class="language_header_text">Step 1: Pick a language</span>
     <div class="language_wrapper">
-        <span class="">Choose from one of the following languages</span>
       <app-language-grid [languages]="languages" (selectedLanguage)="getSelectedLanguage($event)"></app-language-grid>
     </div>
   </a>
@@ -19,6 +19,7 @@
 
 <a href="#timeline">
   <div id="difficulty_component" class="difficulty_wrapper">
+      <span class="difficulty_header_text">Step 2: Choose where to get started</span>
     <app-programming-difficulty [excercises]="excercises" (chosenExcercise)="getSelectedDifficulty($event)">
     </app-programming-difficulty>
   </div>
