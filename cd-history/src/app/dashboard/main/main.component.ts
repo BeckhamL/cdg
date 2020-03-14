@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { TimelineModel } from '../timeline/timeline.model';
 import { LanguageModel } from '../language-grid/language.model';
 import { ProgrammingDifficultyModel, ExcerciseDifficultyEnum } from '../programming-difficulty/programming-difficulty.model';
+import { UserChoiceModel } from './userChoice.model';
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
@@ -9,7 +10,10 @@ import { ProgrammingDifficultyModel, ExcerciseDifficultyEnum } from '../programm
 })
 export class MainComponent implements OnInit {
 
-  constructor() { }
+  userSelectedOptions: UserChoiceModel;
+  constructor() { 
+    this.userSelectedOptions = new UserChoiceModel;
+  }
 
   languages: LanguageModel[] = [
     {title: 'JavaScript', image: 'javascript.svg'},
@@ -17,12 +21,6 @@ export class MainComponent implements OnInit {
     {title: 'Java', image: 'java.svg'},
     {title: 'TypeScript', image: 'typescript.svg'},
     {title: 'Python', image: 'python.svg'}
-  ];
-
-  entries: TimelineModel[] = [
-    {title: 'created', image: '../../assets/james-jebbia.jpg', description: 'Supreme is founded in New York city by James Jebbia', year: 1994},
-    {title: 'created', image: '../../assets/travis-tee.jpg', description: 'Travis Bickle - First product Supreme released', year: 1994},
-    {title: 'created', image: '../../assets/cherry.jpg', description: 'cherry, a skate film directed by William Strobeck featuring skaters such as Tyshawn Jones, Sage Elsesser', year: 2014}
   ];
 
   excercises: ProgrammingDifficultyModel[] = [
@@ -34,12 +32,13 @@ export class MainComponent implements OnInit {
   ngOnInit() {
   }
 
-  getSelectedLanguage($event) {
-    
+  getSelectedLanguage($event: LanguageModel) {
+    this.userSelectedOptions.language = $event;
   }
 
-  getSelectedDifficulty($event) {
-    console.log($event);
+  getSelectedDifficulty($event: ProgrammingDifficultyModel) {
+    this.userSelectedOptions.difficulty = $event;
+    console.log(this.userSelectedOptions);
   }
 
 }

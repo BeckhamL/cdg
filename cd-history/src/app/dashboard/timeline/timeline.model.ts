@@ -1,7 +1,10 @@
 export class TimelineModel {
-    title: string;
-    image: string;
-    description: string;
-    caption?: string;
-    year: number;
+  steps: TimelineStep[];
+}
+
+export class TimelineStep {
+  title: string;
+  image: string;
+  description: string;
+  caption?: string;
 }

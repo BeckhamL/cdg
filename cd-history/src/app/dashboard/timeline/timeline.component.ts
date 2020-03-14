@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { TimelineModel } from './timeline.model';
+import { UserChoiceModel } from '../main/userChoice.model';
+
 @Component({
   selector: 'app-timeline',
   templateUrl: './timeline.component.html',
@@ -8,7 +9,7 @@ import { TimelineModel } from './timeline.model';
 export class TimelineComponent implements OnInit {
 
   @Input()
-  timelineEntries: TimelineModel[];
+  timelineEntries: UserChoiceModel;
 
   constructor() { }
 
