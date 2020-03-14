@@ -8,6 +8,12 @@ a {
   height: 100vh;
 }
 
+.title_div {
+  min-height: 500px;
+  padding: 0px 150px;
+  background: #0066cd;
+}
+
 .difficulty_wrapper {
   height: 100vh;
 }
@@ -17,8 +23,17 @@ a {
 }
 
 .main_text {
-  font-size: 80px;
-  text-align: center;
+  font-size: 100px;
+  color: white;
+  font-weight: bold;
+}
+
+.content_text {
+  font-size: 25px;
+  color: white;
+  border-left: 5px solid #FF4500;
+  margin: 10px 0px;
+  padding: 10px;
 }
 
 .heading_text {
@@ -27,10 +42,37 @@ a {
 
 .language_wrapper {
   margin: 50px 0px;
-  padding: 50px;
+  padding: 50px 150px;
   background: white;
 }
 
 svg {
   fill: #FAF8F8;
+}
+
+
+// Animate gif to float
+app-coding-gif {
+  -webkit-animation: action 1s infinite alternate;
+  animation: action 1s infinite alternate;
+}
+
+@-webkit-keyframes action {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes action {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-15px);
+  }
 }

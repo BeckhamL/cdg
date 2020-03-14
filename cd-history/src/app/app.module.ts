@@ -8,6 +8,7 @@ import { TimelineComponent } from './dashboard/timeline/timeline.component';
 import { LanguageGridComponent } from './dashboard/language-grid/language-grid.component';
 import { ProgrammingDifficultyComponent } from './dashboard/programming-difficulty/programming-difficulty.component';
 import { AngularTiltModule } from 'angular-tilt';
+import { CodingGifComponent } from './ui-elements/coding-gif/coding-gif.component';
 // import {MatIconModule} from '@angular/material/icon';
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { AngularTiltModule } from 'angular-tilt';
     MainComponent,
     TimelineComponent,
     LanguageGridComponent,
-    ProgrammingDifficultyComponent
+    ProgrammingDifficultyComponent,
+    CodingGifComponent
   ],
   imports: [
     BrowserModule,
