@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { ProgrammingDifficultyModel } from './programming-difficulty.model';
+import { VanillaTiltSettings  } from 'angular-tilt';
 
 @Component({
   selector: 'app-programming-difficulty',
@@ -13,6 +14,10 @@ export class ProgrammingDifficultyComponent implements OnInit {
 
   @Output()
   chosenExcercise: EventEmitter<ProgrammingDifficultyModel> = new EventEmitter<ProgrammingDifficultyModel>();
+
+  tiltSettings: VanillaTiltSettings = {
+    glare: true
+  };
 
   constructor() { }
 

@@ -1,6 +1,6 @@
 <div class="_flex_wrap _justify_center grid_wrapper">
   <div *ngFor="let language of languages">
-    <div class="element" title="{{language.title}}" (click)="onSelectLanguage(language)">
+    <div class="element" title="{{language.title}}" (click)="onSelectLanguage(language)" (mouseover)="onHoverLanguage(language)">
       <img src="../../../assets/images/{{language.image}}">
     </div>
   </div>

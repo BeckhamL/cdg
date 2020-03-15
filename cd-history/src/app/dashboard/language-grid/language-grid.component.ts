@@ -13,6 +13,9 @@ export class LanguageGridComponent implements OnInit {
 
   @Output()
   selectedLanguage: EventEmitter<LanguageModel> = new EventEmitter<LanguageModel>();
+
+  @Output()
+  hoverLanguageInfo: EventEmitter<LanguageModel> = new EventEmitter<LanguageModel>();
   
   constructor() { }
 
@@ -21,6 +24,10 @@ export class LanguageGridComponent implements OnInit {
 
   onSelectLanguage($event: LanguageModel) {
     this.selectedLanguage.emit($event);
+  }
+
+  onHoverLanguage(language: LanguageModel) {
+    this.hoverLanguageInfo.emit(language);
   }
 
 }

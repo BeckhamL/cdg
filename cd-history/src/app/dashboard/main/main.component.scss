@@ -62,6 +62,10 @@ a {
   font-weight: bold;
 }
 
+.timeline_wrapper {
+  height: 100vh;
+}
+
 // Animate gif to float
 app-coding-gif {
   -webkit-animation: action 1s infinite alternate;

@@ -11,43 +11,49 @@ import { UserChoiceModel } from './userChoice.model';
 export class MainComponent implements OnInit {
 
   userSelectedOptions: UserChoiceModel;
-  constructor() { 
-    this.userSelectedOptions = new UserChoiceModel;
-  }
+  hoveredLanguage: LanguageModel;
 
   languages: LanguageModel[] = [
-    {title: 'JavaScript', image: 'javascript.svg'},
-    {title: 'C', image: 'c-language.svg'},
-    {title: 'Java', image: 'java.svg'},
-    {title: 'TypeScript', image: 'typescript.svg'},
-    {title: 'Python', image: 'python.svg'}
+    {title: 'JavaScript', image: 'javascript.svg', hoverDescription: 'eg'},
+    {title: 'C', image: 'c-language.svg',hoverDescription: 'eg'},
+    {title: 'Java', image: 'java.svg', hoverDescription: 'eg'},
+    {title: 'TypeScript', image: 'typescript.svg', hoverDescription: 'eg'},
+    {title: 'Python', image: 'python.svg', hoverDescription: 'eg'}
   ];
 
   excercises: ProgrammingDifficultyModel[] = [
     {title: 'Hello World', difficulty: ExcerciseDifficultyEnum.easy, image: 'javascript.svg', timeToLearn: '5 minutes'},
     {title: 'For loops', difficulty: ExcerciseDifficultyEnum.easy, image: 'javascript.svg', timeToLearn: '5 minutes'},
     {title: 'FizzBuzz', difficulty: ExcerciseDifficultyEnum.medium, image: 'javascript.svg', timeToLearn: '10 minutes'},
-  ]
+  ];
 
   fakeData: TimelineModel = {
     steps: [
       {title: 'Getting started', description: 'blag blag blag', image: 'javascript.svg'},
       {title: 'Getting started', description: 'blag blag blag', image: 'javascript.svg'},
       {title: 'Getting started', description: 'blag blag blag', image: 'javascript.svg'}
-
     ]
+  };
+
+  constructor() { 
+    this.userSelectedOptions = new UserChoiceModel;
   }
 
   ngOnInit() {
   }
 
-  getSelectedLanguage($event: LanguageModel) {
+  getSelectedLanguage($event: LanguageModel, target: HTMLElement) {
     this.userSelectedOptions.language = $event;
+    target.scrollIntoView({behavior: 'smooth'});
   }
 
-  getSelectedDifficulty($event: ProgrammingDifficultyModel) {
+  getSelectedDifficulty($event: ProgrammingDifficultyModel, target: HTMLElement) {
     this.userSelectedOptions.difficulty = $event;
-    console.log(this.userSelectedOptions);
+    target.scrollIntoView({behavior: 'smooth'});
+  }
+
+  getHoverLanguage($event: LanguageModel) {
+    this.hoveredLanguage = $event;
   }
 
 }

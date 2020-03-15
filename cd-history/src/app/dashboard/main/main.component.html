@@ -1,31 +1,36 @@
 <div class="main_wrapper">
   <div class="_flex _space_between _flex_align_item_center title_div">
     <div class="_flex_col">
-        <span class="main_text">Learn to <br> code now!</span>
-        <span class="content_text">Coding is already hard - learning how to get started shouldn't be</span>
-        <span class="content_text">We will teach you step by step how to write your first line of code</span>
+      <span class="main_text">Learn to <br> code now!</span>
+      <span class="content_text">Coding is already hard - learning how to get started shouldn't be</span>
+      <span class="content_text">We will teach you step by step how to write your first line of code</span>
     </div>
 
     <app-coding-gif></app-coding-gif>
   </div>
 
-  <a href="#difficulty_component">
-      <span class="language_header_text">Step 1: Pick a language</span>
-    <div class="language_wrapper">
-      <app-language-grid [languages]="languages" (selectedLanguage)="getSelectedLanguage($event)"></app-language-grid>
+  <div class="language_wrapper">
+    <span class="language_header_text">Step 1: Pick a language</span>
+    <div class="_flex _flex_align_item_center _space_between">
+      <div>
+        {{hoveredLanguage?.title}} {{hoveredLanguage?.hoverDescription}}
+      </div>
+        <app-language-grid [languages]="languages" (selectedLanguage)="getSelectedLanguage($event, difficulty_component)" (hoverLanguageInfo)="getHoverLanguage($event)">
+          </app-language-grid>
     </div>
-  </a>
+
+  </div>
+
 </div>
 
-<a href="#timeline">
-  <div id="difficulty_component" class="difficulty_wrapper">
-      <span class="difficulty_header_text">Step 2: Choose where to get started</span>
-    <app-programming-difficulty [excercises]="excercises" (chosenExcercise)="getSelectedDifficulty($event)">
-    </app-programming-difficulty>
+<div #difficulty_component class="difficulty_wrapper">
+  <span class="difficulty_header_text">Step 2: Choose where to get started</span>
+  <app-programming-difficulty [excercises]="excercises" (chosenExcercise)="getSelectedDifficulty($event, timeline_component)">
+  </app-programming-difficulty>
+</div>
+
+<div #timeline_component>
+  <div class="timeline_wrapper">
+    <app-timeline [fakeData]="fakeData"></app-timeline>
   </div>
-</a>
-
-
-<div id="timeline">
-  <app-timeline [fakeData]="fakeData"></app-timeline>
 </div>

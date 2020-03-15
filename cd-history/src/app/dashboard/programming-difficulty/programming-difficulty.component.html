@@ -2,7 +2,7 @@
   <!-- <div>Choose the excercise you would like to work on</div> -->
 </div>
 <div class="_flex_wrap _justify_center _space_evenly">
-  <div class="_flex _flex_align_item_end card" *ngFor="let excercise of excercises" (click)="onClickProgrammingDifficulty(excercise)" aTilt>
+  <div class="_flex _flex_align_item_end card" *ngFor="let excercise of excercises" (click)="onClickProgrammingDifficulty(excercise)" aTilt [tiltSettings]="tiltSettings">
 
     <img src="../../../assets/images/{{excercise.image}}" class="inner">
     <div class="text_wrapper">
