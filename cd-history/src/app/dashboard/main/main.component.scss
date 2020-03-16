@@ -1,9 +1,5 @@
 @import '../../../assets/scss/layout.scss';
 
-a {
-  text-decoration: none;
-}
-
 .main_wrapper {
   height: 100vh;
 }
@@ -17,7 +13,7 @@ a {
 .difficulty_wrapper {
   height: 100vh;
   padding: 50px 150px;
-  background:  #0066cd;
+  background: #0066cd;
 }
 
 .difficulty_header_text {
@@ -64,6 +60,35 @@ a {
 
 .timeline_wrapper {
   height: 100vh;
+}
+
+.hover_div {
+  height: 200px;
+  max-height: 200px;
+  width: 35%;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  background: #272822;
+}
+
+.hover_title {
+  font-size: 30px;
+  font-weight: bold;
+  color: $_green;
+}
+
+.hover_description {
+  color: white;
+  font-size: 25px;
+}
+
+.dialect_text {
+  color: $_pink;
+}
+
+.margin_tb_25 {
+  margin: 25px 0px;
 }
 
 // Animate gif to float

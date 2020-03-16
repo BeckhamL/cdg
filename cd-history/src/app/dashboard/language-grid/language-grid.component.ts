@@ -16,6 +16,9 @@ export class LanguageGridComponent implements OnInit {
 
   @Output()
   hoverLanguageInfo: EventEmitter<LanguageModel> = new EventEmitter<LanguageModel>();
+
+  @Output()
+  leaveHover: EventEmitter<boolean> = new EventEmitter<boolean>();
   
   constructor() { }
 
@@ -28,6 +31,10 @@ export class LanguageGridComponent implements OnInit {
 
   onHoverLanguage(language: LanguageModel) {
     this.hoverLanguageInfo.emit(language);
+  }
+
+  onHoverLeave() {
+    this.leaveHover.emit(true);
   }
 
 }

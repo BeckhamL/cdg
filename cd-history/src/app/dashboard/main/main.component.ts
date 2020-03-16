@@ -14,11 +14,11 @@ export class MainComponent implements OnInit {
   hoveredLanguage: LanguageModel;
 
   languages: LanguageModel[] = [
-    {title: 'JavaScript', image: 'javascript.svg', hoverDescription: 'eg'},
-    {title: 'C', image: 'c-language.svg',hoverDescription: 'eg'},
-    {title: 'Java', image: 'java.svg', hoverDescription: 'eg'},
-    {title: 'TypeScript', image: 'typescript.svg', hoverDescription: 'eg'},
-    {title: 'Python', image: 'python.svg', hoverDescription: 'eg'}
+    {title: 'JavaScript', image: 'javascript.svg', hoverDescription: 'eg', dialect: '/ˈjävəskript,ˈjavə-/'},
+    {title: 'C', image: 'c-language.svg',hoverDescription: 'eg', dialect: 'c'},
+    {title: 'Java', image: 'java.svg', hoverDescription: 'eg', dialect: '/ˈjävə,ˈjavə/'},
+    {title: 'TypeScript', image: 'typescript.svg', hoverDescription: 'eg', dialect: '/ˈtīpˌskript/'},
+    {title: 'Python', image: 'python.svg', hoverDescription: 'eg', dialect: '/ˈpīˌTHän,ˈpīTHən/'}
   ];
 
   excercises: ProgrammingDifficultyModel[] = [

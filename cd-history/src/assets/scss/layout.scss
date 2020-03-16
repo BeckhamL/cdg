@@ -1,3 +1,5 @@
+@import './variables.scss';
+
 ._flex {
   display: flex;
 }
@@ -36,6 +38,10 @@
 
 ._flex_align_item_end {
   align-items: flex-end;
+}
+
+._flex_align_item_start {
+  align-items: flex-start;
 }
 
 ._flex_align_item_center {

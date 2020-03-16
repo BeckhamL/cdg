@@ -11,12 +11,25 @@
 
   <div class="language_wrapper">
     <span class="language_header_text">Step 1: Pick a language</span>
-    <div class="_flex _flex_align_item_center _space_between">
-      <div>
-        {{hoveredLanguage?.title}} {{hoveredLanguage?.hoverDescription}}
+    <div class="_flex _flex_align_item_start _space_between margin_tb_25">
+      <div class="hover_div">
+        <div *ngIf="!hoveredLanguage; else hovering">
+          <span class="hover_title">Hover a language for more info!</span>
+        </div>
+        <ng-template #hovering>
+          <div>
+            <span class="hover_title">{{hoveredLanguage?.title}}</span> <span class="dialect_text">	&#9899; {{hoveredLanguage?.dialect}}</span>
+          </div>
+          <div class="hover_description">
+              {{hoveredLanguage?.hoverDescription}}
+          </div>
+
+        </ng-template>
       </div>
-        <app-language-grid [languages]="languages" (selectedLanguage)="getSelectedLanguage($event, difficulty_component)" (hoverLanguageInfo)="getHoverLanguage($event)">
-          </app-language-grid>
+
+      <app-language-grid [languages]="languages" (selectedLanguage)="getSelectedLanguage($event, difficulty_component)"
+        (hoverLanguageInfo)="getHoverLanguage($event)" (leaveHover)="hoveredLanguage = null">
+      </app-language-grid>
     </div>
 
   </div>
@@ -25,7 +38,8 @@
 
 <div #difficulty_component class="difficulty_wrapper">
   <span class="difficulty_header_text">Step 2: Choose where to get started</span>
-  <app-programming-difficulty [excercises]="excercises" (chosenExcercise)="getSelectedDifficulty($event, timeline_component)">
+  <app-programming-difficulty [excercises]="excercises"
+    (chosenExcercise)="getSelectedDifficulty($event, timeline_component)">
   </app-programming-difficulty>
 </div>
 
