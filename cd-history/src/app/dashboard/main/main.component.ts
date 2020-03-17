@@ -14,10 +14,10 @@ export class MainComponent implements OnInit {
   hoveredLanguage: LanguageModel;
 
   languages: LanguageModel[] = [
-    {title: 'JavaScript', image: 'javascript.svg', hoverDescription: 'eg', dialect: '/ˈjävəskript,ˈjavə-/'},
-    {title: 'C', image: 'c-language.svg',hoverDescription: 'eg', dialect: 'c'},
-    {title: 'Java', image: 'java.svg', hoverDescription: 'eg', dialect: '/ˈjävə,ˈjavə/'},
-    {title: 'TypeScript', image: 'typescript.svg', hoverDescription: 'eg', dialect: '/ˈtīpˌskript/'},
+    {title: 'JavaScript', image: 'javascript.svg', hoverDescription: 'an object oriented programming language used commonly for the web', dialect: '/ˈjävəskript,ˈjavə-/'},
+    {title: 'C', image: 'c-language.svg',hoverDescription: 'an imperative programming language developed for system programming', dialect: 'c'},
+    {title: 'Java', image: 'java.svg', hoverDescription: 'an object oriented and class based programming language', dialect: '/ˈjävə,ˈjavə/'},
+    {title: 'TypeScript', image: 'typescript.svg', hoverDescription: 'an object oriented programming language that transcompiles to JavaScript', dialect: '/ˈtīpˌskript/'},
     {title: 'Python', image: 'python.svg', hoverDescription: 'eg', dialect: '/ˈpīˌTHän,ˈpīTHən/'}
   ];
 

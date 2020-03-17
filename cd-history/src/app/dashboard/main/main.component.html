@@ -38,9 +38,14 @@
 
 <div #difficulty_component class="difficulty_wrapper">
   <span class="difficulty_header_text">Step 2: Choose where to get started</span>
-  <app-programming-difficulty [excercises]="excercises"
-    (chosenExcercise)="getSelectedDifficulty($event, timeline_component)">
-  </app-programming-difficulty>
+  <div class="difficulty_cards">
+    <app-programming-difficulty [excercises]="excercises" (chosenExcercise)="getSelectedDifficulty($event, timeline_component)">
+    </app-programming-difficulty>
+  </div>
+
+  <div class="excercise_hover_info">
+
+  </div>
 </div>
 
 <div #timeline_component>

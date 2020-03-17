@@ -16,7 +16,7 @@ export class ProgrammingDifficultyComponent implements OnInit {
   chosenExcercise: EventEmitter<ProgrammingDifficultyModel> = new EventEmitter<ProgrammingDifficultyModel>();
 
   tiltSettings: VanillaTiltSettings = {
-    glare: true
+    glare: false
   };
 
   constructor() { }
